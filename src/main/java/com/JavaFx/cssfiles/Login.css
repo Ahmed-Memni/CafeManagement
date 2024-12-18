@@ -1,0 +1,74 @@
+.image-background {
+    -fx-background-image: url("../Images/ee.jpg");
+    -fx-background-size: cover; /* full area */
+    -fx-background-repeat: no-repeat; /* no error */
+    -fx-background-position: center; /* image centré */
+}
+.white-form {
+    -fx-background-color: #fff;
+}
+.head-label {
+    -fx-border-color:black;
+    -fx-border-width: 0 0 0 5px;
+    -fx-padding: 0 0 0 5px;
+}
+.black.button {
+    -fx-background-color: black; /* Black tton */
+    -fx-text-fill: white; /* White text*/
+    -fx-font-size: 16px; /* size il font */
+    -fx-padding: 12px 24px; /* gestion d'error pour lbutton size */
+    -fx-border-radius: 8px; /* courners roundedd */
+    -fx-background-radius: 8px; /* Background size */
+    -fx-border-color: white; /* border */
+    -fx-border-width: 1px; /* taille border */
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 5, 0, 0, 2); /* shadow coloré white */
+}
+
+/* Hover */
+.black.button:hover {
+    -fx-background-color: #333333; /* Lighter black for hover effect */
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.7), 7, 0, 0, 3); /* Stronger white shadow */
+    -fx-cursor: hand; /* Pointer cursor on hover */
+}
+
+/* Focus */
+.black.button:focused {
+    -fx-background-color: #444444; /* Slightly lighter black on focus */
+    -fx-border-color: #FFD700; /* Golden border for focus effect */
+    -fx-border-width: 2px; /* Thicker border for focus */
+    -fx-effect: dropshadow(gaussian, #FFD700, 8, 0, 0, 3); /* Golden glow */
+}
+.white.button {
+    -fx-background-color: white; /* White button background */
+    -fx-text-fill: black; /* Black text color */
+    -fx-font-size: 16px; /* Font size */
+    -fx-padding: 12px 24px; /* Padding for better button size */
+    -fx-border-radius: 8px; /* Rounded corners for smoother look */
+    -fx-background-radius: 8px; /* Background radius */
+    -fx-border-color: black; /* Black border */
+    -fx-border-width: 1px; /* Thin border */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2); /* Subtle black shadow */
+}
+
+/* Hover */
+.white.button:hover {
+    -fx-background-color: white; /*darker white */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 7, 0, 0, 3); /* shadow */
+    -fx-cursor: hand; /* Pointer cursor on hover */
+}
+
+/* Focus */
+.white.button:focused {
+    -fx-background-color: #E8E8E8; /*darker white */
+    -fx-border-color: #FFD700; /* Golden border */
+    -fx-border-width: 2px; /* Thicker border */
+    -fx-effect: dropshadow(gaussian, #FFD700, 8, 0, 0, 3); /* glow */
+}
+.textfield{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: .5px;
+}
+.textfield:focused{
+    -fx-border-width: 1px;
+}

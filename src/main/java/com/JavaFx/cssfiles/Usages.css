@@ -1,0 +1,12 @@
+/* General Hover Effect for Buttons */
+.button:hover {
+    -fx-background-color: white; /* White background on hover */
+    -fx-text-fill: black; /* Black text on hover */
+}
+
+/* Table Column Titles */
+.table-view .column-header {
+    -fx-background-color: black; /* Black column header background */
+    -fx-text-fill: white; /* White text for titles */
+    -fx-font-weight: bold; /* Bold titles */
+}

@@ -1,0 +1,12 @@
+.anchor-pane {
+    -fx-background-image: url("../Images/Serveurz.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: cover;
+}
+.anchor1-pane {
+    -fx-background-image: url("../Images/Chef-illustration-vectors.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: cover;
+}

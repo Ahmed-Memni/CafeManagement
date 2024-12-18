@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.JavaFx.Controllerfiles.CreateController">
+   <children>
+      <AnchorPane fx:id="Sii_Create" prefHeight="681.0" prefWidth="745.0">
+         <children>
+            <AnchorPane fx:id="Si_Create" layoutY="10.0" prefHeight="688.0" prefWidth="374.0">
+               <children>
+                  <FontAwesomeIcon glyphName="USER" layoutX="122.0" layoutY="140.0" size="9em" wrappingWidth="100.4285717010498" />
+                  <Label layoutX="74.0" layoutY="169.0" prefHeight="32.0" prefWidth="197.0" styleClass="head-label" stylesheets="@../cssfiles/Login.css" text="CREATE ACCOUNT">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="Create_Password" layoutX="61.0" layoutY="276.0" prefHeight="40.0" prefWidth="248.0" promptText="Password" styleClass="textfield" stylesheets="@../cssfiles/Login.css" />
+                  <Button fx:id="CREATE" layoutX="66.0" layoutY="522.0" mnemonicParsing="false" onAction="#create" prefHeight="40.0" prefWidth="242.0" styleClass="black" stylesheets="@../cssfiles/Login.css" text="Create" />
+                  <TextField fx:id="Create_Cin" layoutX="61.0" layoutY="329.0" prefHeight="40.0" prefWidth="248.0" promptText="Cin" styleClass="textfield" stylesheets="@../cssfiles/Login.css" />
+                  <TextField fx:id="Create_Username" layoutX="61.0" layoutY="222.0" prefHeight="40.0" prefWidth="248.0" promptText="Username" styleClass="textfield" stylesheets="@../cssfiles/Login.css" />
+                  <ComboBox fx:id="Create_Question" layoutX="61.0" layoutY="378.0" prefHeight="40.0" prefWidth="248.0" promptText="Question" styleClass="textfield" stylesheets="@../cssfiles/Login.css" />
+                  <TextField fx:id="Create_Answeer" layoutX="61.0" layoutY="424.0" prefHeight="40.0" prefWidth="248.0" promptText="Answer" styleClass="textfield" stylesheets="@../cssfiles/Login.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="375.0" prefHeight="702.0" prefWidth="374.0" styleClass="image-background" stylesheets="@../cssfiles/Login.css">
+               <children>
+                  <Button fx:id="GOLOGIN" layoutX="67.0" layoutY="618.0" mnemonicParsing="false" onAction="#gologin" prefHeight="40.0" prefWidth="242.0" styleClass="white" stylesheets="@../cssfiles/Login.css" text="Login" />
+                  <Label layoutX="46.0" layoutY="577.0" prefHeight="32.0" prefWidth="276.0" text="ALREADY HAVE AN ACCOUNT" textFill="#fffdfd">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="1236.0" styleClass="image-background" stylesheets="@../cssfiles/Mainpage1.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.JavaFx.Controllerfiles.EmployeeController">
+    <top>
+        <HBox alignment="CENTER" prefHeight="47.0" prefWidth="1109.0" styleClass="ki-baground" stylesheets="@../cssfiles/Mainpage1.css" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="GOCUSTOMERS" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#gocustomers" prefHeight="47.0" prefWidth="183.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="CUSTOMERS" textAlignment="RIGHT">
+                    <font>
+                        <Font name="System Italic" size="7.0" />
+                    </font>
+                </Button>
+                <Button fx:id="GODASHBOARD" alignment="CENTER" contentDisplay="CENTER" layoutX="417.0" layoutY="10.0" mnemonicParsing="false" onAction="#GODASHBOARD" prefHeight="47.0" prefWidth="177.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="DASHBOARD" />
+                <Button fx:id="GOCHEF" alignment="CENTER" contentDisplay="CENTER" layoutX="358.0" layoutY="10.0" mnemonicParsing="false" onAction="#gochef" prefHeight="47.0" prefWidth="103.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="Chef" />
+            <Button fx:id="GOSERVER" alignment="CENTER" contentDisplay="CENTER" layoutX="334.0" layoutY="10.0" mnemonicParsing="false" onAction="#goserver" prefHeight="47.0" prefWidth="113.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="Server" />
+                <Button fx:id="GOMENU" alignment="CENTER" contentDisplay="CENTER" layoutX="298.0" layoutY="10.0" mnemonicParsing="false" onAction="#gomenu" prefHeight="47.0" prefWidth="109.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="MENU" />
+                <Button fx:id="GOINVENTORY" alignment="CENTER" contentDisplay="CENTER" layoutX="650.0" layoutY="10.0" mnemonicParsing="false" onAction="#goinventory" prefHeight="47.0" prefWidth="152.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="INVENTORY" />
+                <HBox prefHeight="47.0" prefWidth="156.0" />
+                <Button fx:id="GOLOGOUT" mnemonicParsing="false" onAction="#gologout" prefHeight="46.0" prefWidth="126.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="LOG OUT" />
+                <Separator orientation="VERTICAL" prefHeight="200.0" rotate="1.3" styleClass="kekw" stylesheets="@../cssfiles/Mainpage1.css" />
+                <Button fx:id="GOCLOSE" mnemonicParsing="false" onAction="#goclose" prefHeight="44.0" prefWidth="108.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="CLOSE" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <AnchorPane prefHeight="592.0" prefWidth="1236.0" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane layoutX="30.0" layoutY="30.0" prefHeight="520.0" prefWidth="1173.0" styleClass="ki-baground" stylesheets="@../cssfiles/Usages.css">
+                    <children>
+                  <AnchorPane prefHeight="520.0" prefWidth="538.0" styleClass="anchor-pane" stylesheets="@../cssfiles/Cheff_Serveur.css">
+                     <children>
+                        <Separator layoutX="512.0" layoutY="2.0" orientation="VERTICAL" prefHeight="518.0" prefWidth="36.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="530.0" layoutY="-1.0" prefHeight="521.0" prefWidth="656.0" stylesheets="@../cssfiles/Cheff_Serveur.css">
+                     <children>
+                        <TableView fx:id="TABLESERVER" layoutX="58.0" layoutY="14.0" onSort="#tableserver" prefHeight="364.0" prefWidth="541.0">
+                           <columns>
+                              <TableColumn fx:id="Server" prefWidth="112.0" text="Server-Name" />
+                              <TableColumn fx:id="tlf" prefWidth="103.0" text="Numero TLF" />
+                              <TableColumn fx:id="adresse" prefWidth="71.0" text="Adresse" />
+                              <TableColumn fx:id="sal" minWidth="0.0" prefWidth="68.0" text="Salaire" />
+                              <TableColumn fx:id="date" prefWidth="82.0" text="Date embauche" />
+                              <TableColumn fx:id="tables" prefWidth="104.0" text="Tables" />
+                           </columns>
+                        </TableView>
+                              <Button fx:id="CLEARSERVER" layoutX="188.0" layoutY="438.0" mnemonicParsing="false" onAction="#clearserver" text="Clear" />
+                              <Button fx:id="GOUPDATESERVERR" layoutX="65.0" layoutY="438.0" mnemonicParsing="false" onAction="#addserver" text="Add" />
+                              <Button fx:id="GOUPDATESERVER" layoutX="348.0" layoutY="438.0" mnemonicParsing="false" onAction="#updateserver" text="Update" />
+                              <Button fx:id="GODELETESERVER" layoutX="502.0" layoutY="438.0" mnemonicParsing="false" onAction="#deleteserver" text="Delete" />
+                     </children>
+                  </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

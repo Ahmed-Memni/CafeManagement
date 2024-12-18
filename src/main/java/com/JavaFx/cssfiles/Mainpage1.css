@@ -1,0 +1,47 @@
+
+.root { /* The base style for the left panel's root */
+    -fx-background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    -fx-background-radius: 10; /* Rounded corners for the panel */
+}
+.ki-baground{
+    -fx-background-color:white
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+.button {
+    -fx-background-color: rgba(0,0,0,0); /* Dark gray button background */
+    -fx-text-fill: BLACK; /* White text color */
+    -fx-font-size: 16px; /* Font size */
+    -fx-padding: 12px 24px; /* Padding for better button size */
+    -fx-border-radius: 8px; /* Rounded corners for smoother look */
+    -fx-background-radius: 8px; /* Background radius */
+    -fx-border-width: 1px; /* Thin border */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2); /* Subtle shadow for depth */
+}
+
+/* Hover */
+.button:hover {
+    -fx-background-color: #6A6A6A; /* Lighter gray for hover effect */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 7, 0, 0, 3); /* Stronger shadow */
+    -fx-cursor: hand; /* Pointer cursor on hover */
+}
+
+/* Focus */
+.button:focused {
+    -fx-background-color: #5C5C5C; /* Slightly lighter button on focus */
+    -fx-border-color: #FFC107; /* Golden yellow border for focus effect */
+    -fx-border-width: 2px; /* Thicker border for focus */
+    -fx-effect: dropshadow(gaussian, #FFC107, 8, 0, 0, 3); /* Golden glow */
+}
+
+/* Button Text Styling */
+.button .text {
+    -fx-font-weight: bold; /* Bold text for emphasis */
+    -fx-font-family: "Arial", sans-serif; /* Clean font */
+    -fx-text-alignment: center; /* Centered text */
+}
+.kekw{
+    -fx-background-color: black;
+}

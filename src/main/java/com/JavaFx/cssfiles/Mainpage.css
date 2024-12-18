@@ -1,0 +1,53 @@
+/* Mainpage.css */
+
+/* color baground */
+.dark-background {
+    -fx-background-color: white; /* lighter brown */
+}
+.ki-baground{
+    -fx-background-color: rgb(208, 203, 190);
+}
+.label {
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 14px; /* Font size */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-font-family: "Arial", sans-serif; /* Font family */
+}
+
+    /* buttons */
+.button {
+    -fx-background-color: #333333; /* Dark button background */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 16px; /* Font size */
+    -fx-padding: 10px 20px; /* gestion d'error*/
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-background-radius: 5px; /* Rounded corners for background */
+    -fx-border-color: transparent; /* No border */
+    -fx-effect: innershadow(gaussian, #000000, 3, 0, 0, 1); /* Shadow effect for buttons */
+}
+
+/* Hover */
+.button:hover {
+    -fx-background-color: #555555; /* Lighter dark color on hover */
+    -fx-effect: innershadow(gaussian, #444444, 3, 0, 0, 2); /* shdown intensity incrisé ki thovery */
+}
+
+/* Focus  */
+.button:focused {
+    -fx-background-color: #444444; /* Slightly lighter button on focus */
+    -fx-border-color: #4CAF50; /* Green border when focused */
+    -fx-border-width: 2px; /* Border width */
+    -fx-effect: innershadow(gaussian, #4CAF50, 5, 0, 0, 3); /* Green glow effect */
+}
+
+/* Button Text styling */
+.button .text {
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial", sans-serif;
+}
+.image-background {
+    -fx-background-image: url("../Images/coffee_break-wallpaper-5120x2880.jpg");
+    -fx-background-size: cover; /* Scales image*/
+    -fx-background-repeat: no-repeat; /* Prevents repeating */
+    -fx-background-position: center; /* Centers the image */
+}

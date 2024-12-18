@@ -1,0 +1,220 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3548), pid=8528, tid=13472
+#
+# JRE version:  (17.0.12+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (17.0.12+8-LTS-286, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --module-path=C:\Program Files\Java\javafx-sdk-17.0.13\lib --add-modules=javafx.controls,javafx.fxml,javafx.graphics,javafx.base,javafx.web -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\lib\idea_rt.jar=63208:C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin -Dfile.encoding=UTF-8 com.JavaFx.CafeManagement
+
+Host: Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz, 8 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.4391)
+Time: Sun Dec 15 09:50:14 2024 W. Central Africa Standard Time elapsed time: 0.010887 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000025ab7966420):  JavaThread "Unknown thread" [_thread_in_vm, id=13472, stack(0x0000008668d00000,0x0000008668e00000)]
+
+Stack: [0x0000008668d00000,0x0000008668e00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67a04a]
+V  [jvm.dll+0x7da4ed]
+V  [jvm.dll+0x7dbe33]
+V  [jvm.dll+0x7dc4a3]
+V  [jvm.dll+0x24508f]
+V  [jvm.dll+0x677089]
+V  [jvm.dll+0x66bd32]
+V  [jvm.dll+0x301fa6]
+V  [jvm.dll+0x309546]
+V  [jvm.dll+0x359d2e]
+V  [jvm.dll+0x359f5f]
+V  [jvm.dll+0x2d9078]
+V  [jvm.dll+0x2d9fe4]
+V  [jvm.dll+0x7aca21]
+V  [jvm.dll+0x367591]
+V  [jvm.dll+0x78b999]
+V  [jvm.dll+0x3ec83f]
+V  [jvm.dll+0x3ee471]
+C  [jli.dll+0x5297]
+C  [ucrtbase.dll+0x29333]
+C  [KERNEL32.DLL+0x1259d]
+C  [ntdll.dll+0x5af38]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffd77b87a18, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000025ab79d2180 GCTaskThread "GC Thread#0" [stack: 0x0000008668e00000,0x0000008668f00000] [id=10196]
+  0x0000025ab79e2e50 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000008668f00000,0x0000008669000000] [id=13356]
+  0x0000025ab79e3860 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000008669000000,0x0000008669100000] [id=18336]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffd773b9b67]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000025ab79615a0] Heap_lock - owner thread: 0x0000025ab7966420
+
+Heap address: 0x0000000702800000, size: 4056 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000702800000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffd777a3859]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.007 Loaded shared library C:\Program Files\Java\jdk-17\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff612890000 - 0x00007ff6128a0000 	C:\Program Files\Java\jdk-17\bin\java.exe
+0x00007ffdc6430000 - 0x00007ffdc6647000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffdc4460000 - 0x00007ffdc4524000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffdc3850000 - 0x00007ffdc3c0a000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffdc3700000 - 0x00007ffdc3811000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffdbfb60000 - 0x00007ffdbfb7b000 	C:\Program Files\Java\jdk-17\bin\VCRUNTIME140.dll
+0x00007ffdbf580000 - 0x00007ffdbf599000 	C:\Program Files\Java\jdk-17\bin\jli.dll
+0x00007ffdc4530000 - 0x00007ffdc45e2000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffdc51b0000 - 0x00007ffdc5257000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffdc4140000 - 0x00007ffdc41e7000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffdc3820000 - 0x00007ffdc3848000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffdc52c0000 - 0x00007ffdc53d4000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffdc4f60000 - 0x00007ffdc510e000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffdc3c90000 - 0x00007ffdc3cb6000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffdb3120000 - 0x00007ffdb33b2000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.4541_none_2710d1c57384c085\COMCTL32.dll
+0x00007ffdc4250000 - 0x00007ffdc4279000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffdc3d40000 - 0x00007ffdc3e5b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffdc3fd0000 - 0x00007ffdc406a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffdbf4f0000 - 0x00007ffdbf4fa000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffdc4210000 - 0x00007ffdc4241000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffdc0500000 - 0x00007ffdc050c000 	C:\Program Files\Java\jdk-17\bin\vcruntime140_1.dll
+0x00007ffdb2dd0000 - 0x00007ffdb2e5e000 	C:\Program Files\Java\jdk-17\bin\msvcp140.dll
+0x00007ffd770d0000 - 0x00007ffd77cb0000 	C:\Program Files\Java\jdk-17\bin\server\jvm.dll
+0x00007ffdc51a0000 - 0x00007ffdc51a8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffdc0250000 - 0x00007ffdc0259000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffdbccd0000 - 0x00007ffdbcd04000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffdc53e0000 - 0x00007ffdc5451000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffdc27f0000 - 0x00007ffdc2808000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffdc0090000 - 0x00007ffdc009a000 	C:\Program Files\Java\jdk-17\bin\jimage.dll
+0x00007ffdc0860000 - 0x00007ffdc0a92000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffdc5e90000 - 0x00007ffdc621f000 	C:\WINDOWS\System32\combase.dll
+0x00007ffdc4600000 - 0x00007ffdc46d7000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffda4720000 - 0x00007ffda4752000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffdc3c10000 - 0x00007ffdc3c8b000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffdbfb40000 - 0x00007ffdbfb4e000 	C:\Program Files\Java\jdk-17\bin\instrument.dll
+0x00007ffdbe7f0000 - 0x00007ffdbe815000 	C:\Program Files\Java\jdk-17\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.4541_none_2710d1c57384c085;C:\Program Files\Java\jdk-17\bin\server
+
+VM Arguments:
+jvm_args: --module-path=C:\Program Files\Java\javafx-sdk-17.0.13\lib --add-modules=javafx.controls,javafx.fxml,javafx.graphics,javafx.base,javafx.web -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\lib\idea_rt.jar=63208:C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin -Dfile.encoding=UTF-8 
+java_command: com.JavaFx.CafeManagement
+java_class_path (initial): C:\Users\memni\IdeaProjects\CafeManagement\target\classes;C:\Users\memni\.m2\repository\org\openjfx\javafx-controls\17.0.6\javafx-controls-17.0.6.jar;C:\Users\memni\.m2\repository\org\openjfx\javafx-controls\17.0.6\javafx-controls-17.0.6-win.jar;C:\Users\memni\.m2\repository\org\openjfx\javafx-graphics\17.0.6\javafx-graphics-17.0.6.jar;C:\Users\memni\.m2\repository\org\openjfx\javafx-graphics\17.0.6\javafx-graphics-17.0.6-win.jar;C:\Users\memni\.m2\repository\org\openjfx\javafx-base\17.0.6\javafx-base-17.0.6.jar;C:\Users\memni\.m2\repository\org\openjfx\javafx-base\17.0.6\javafx-base-17.0.6-win.jar;C:\Users\memni\.m2\repository\org\openjfx\javafx-fxml\17.0.6\javafx-fxml-17.0.6.jar;C:\Users\memni\.m2\repository\org\openjfx\javafx-fxml\17.0.6\javafx-fxml-17.0.6-win.jar;C:\Users\memni\.m2\repository\de\jensd\fontawesomefx\8.0.0\fontawesomefx-8.0.0.jar;C:\Program Files\Java\javafx-sdk-17.0.13\lib\javafx-swt.jar;C:\Program Files\Java\javafx-sdk-17.0.13\lib\javafx.base.jar;C:\Program Files\Java\javafx-sdk-17.0.13\lib\javafx.controls.jar;C:\Program Files\Java\javafx-sdk-17.0.13\lib\javafx.fxml.jar;C:\Program Files\Java\javafx-sdk-17.0.13\lib\javafx.graphics.jar;C:\Program Files\Java\javafx-sdk-17.0.13\lib\javafx.media.jar;C:\Program Files\Java\javafx-sdk-17.0.13\lib\javafx.swing.jar;C:\Program Files\Java\javafx-sdk-17.0.13\lib\javafx.web.jar;C:\Program Files\fontawesomefx-8.2.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 266338304                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4253024256                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4253024256                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-17
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\app\memni\product\21c\dbhomeXE\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Java\jdk-17\bin;C:\Users\memni\AppData\Local\Microsoft\WindowsApps;C:\Users\memni\.dotnet\tools;C:\Users\memni\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Users\memni\AppData\Local\GitHubDesktop\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;
+USERNAME=memni
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.4391)
+OS uptime: 0 days 22:18 hours
+Hyper-V role detected
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 165 stepping 2 microcode 0xe2, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt, hv
+
+Memory: 4k page, system-wide physical 16219M (4006M free)
+TotalPageFile size 65371M (AvailPageFile size 91M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 60M, peak: 314M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (17.0.12+8-LTS-286) for windows-amd64 JRE (17.0.12+8-LTS-286), built on Jun  5 2024 06:46:59 by "mach5one" with MS VC++ 17.6 (VS2022)
+
+END.

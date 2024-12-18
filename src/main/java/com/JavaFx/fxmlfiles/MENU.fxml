@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="1236.0" styleClass="image-background" stylesheets="@../cssfiles/Mainpage1.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.JavaFx.Controllerfiles.MenuController">
+    <top>
+        <HBox alignment="CENTER" prefHeight="47.0" prefWidth="1109.0" styleClass="ki-baground" stylesheets="@../cssfiles/Mainpage1.css" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="GOCUSTOMERS" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#gocustomers" prefHeight="47.0" prefWidth="165.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="CUSTOMERS" textAlignment="RIGHT">
+                    <font>
+                        <Font name="System Italic" size="7.0" />
+                    </font>
+                </Button>
+                <Button fx:id="GODASHBOARD" alignment="CENTER" contentDisplay="CENTER" layoutX="417.0" layoutY="10.0" mnemonicParsing="false" onAction="#godashboard" prefHeight="47.0" prefWidth="167.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="DASHBOARD" />
+                <Button fx:id="GOChef" alignment="CENTER" contentDisplay="CENTER" layoutX="358.0" layoutY="10.0" mnemonicParsing="false" onAction="#gochef" prefHeight="47.0" prefWidth="96.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="Chef" />
+                <Button fx:id="Goserver" alignment="CENTER" contentDisplay="CENTER" layoutX="336.0" layoutY="10.0" mnemonicParsing="false" onAction="#goserver" prefHeight="47.0" prefWidth="101.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="Server" />
+                <Button fx:id="GOMENU" alignment="CENTER" contentDisplay="CENTER" layoutX="298.0" layoutY="10.0" mnemonicParsing="false" onAction="#gomenu" prefHeight="47.0" prefWidth="97.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="MENU" />
+                <Button fx:id="GOINVENTORY" alignment="CENTER" contentDisplay="CENTER" layoutX="650.0" layoutY="10.0" mnemonicParsing="false" onAction="#goinventory" prefHeight="47.0" prefWidth="143.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="INVENTORY" />
+                <HBox prefHeight="47.0" prefWidth="229.0" />
+                <Button fx:id="GoLOG" mnemonicParsing="false" onAction="#gologout" prefHeight="46.0" prefWidth="126.0" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="LOG OUT" />
+                <Separator orientation="VERTICAL" prefHeight="200.0" rotate="1.3" styleClass="kekw" stylesheets="@../cssfiles/Mainpage1.css" />
+                <Button fx:id="Goclose" mnemonicParsing="false" onAction="#close" styleClass="transparent" stylesheets="@../cssfiles/Mainpage1.css" text="CLOSE" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <AnchorPane prefHeight="592.0" prefWidth="1236.0" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane layoutX="40.0" layoutY="30.0" prefHeight="520.0" prefWidth="1173.0" styleClass="ki-baground" stylesheets="@../cssfiles/Usages.css">
+                    <children>
+                        <AnchorPane layoutX="1.0" prefHeight="283.0" prefWidth="542.0">
+                            <children>
+                                <TextField fx:id="look" layoutX="31.0" layoutY="15.0" onAction="#Search" promptText="    Search" />
+                                <FontAwesomeIcon glyphName="SEARCH" layoutX="37.0" layoutY="31.0" />
+                        <TableView fx:id="tablevieworders" layoutX="109.0" layoutY="50.0" prefHeight="199.0" prefWidth="324.0">
+                           <columns>
+                              <TableColumn fx:id="name" prefWidth="143.0" text="OrderItem" />
+                              <TableColumn fx:id="price" prefWidth="177.0" text="Price" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="reset" layoutX="440.0" layoutY="-1.0" mnemonicParsing="false" onAction="#reset" text="RESET TABLE" />
+                            </children>
+                        </AnchorPane>
+                        <TextField fx:id="ordername" layoutX="197.0" layoutY="316.0" />
+                        <TextField fx:id="Addprice" layoutX="197.0" layoutY="362.0" />
+                        <Button fx:id="ADDorder" layoutX="87.0" layoutY="434.0" mnemonicParsing="false" onAction="#addorder" text="Add" />
+                        <Button fx:id="receit" layoutX="828.0" layoutY="387.0" mnemonicParsing="false" onAction="#AFFICHERRECIET" text="Receit" />
+                        <Button fx:id="clear" layoutX="238.0" layoutY="434.0" mnemonicParsing="false" onAction="#clearorders" text="Clear" />
+                        <Button fx:id="Dlete" layoutX="410.0" layoutY="434.0" mnemonicParsing="false" onAction="#delteorder" text="Delete" />
+                        <Label layoutX="106.0" layoutY="320.0" prefHeight="17.0" prefWidth="80.0" text="Order-Name :" />
+                        <Label layoutX="127.0" layoutY="366.0" prefHeight="17.0" prefWidth="96.0" text="PRICE :" />
+                  <Separator layoutX="587.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="521.0" prefWidth="35.0" />
+                        <Separator layoutY="270.0" prefHeight="35.0" prefWidth="604.0" />
+                  <TableView fx:id="tableview" layoutX="637.0" layoutY="58.0" onSort="#tableview" prefHeight="199.0" prefWidth="476.0">
+                     <columns>
+                        <TableColumn prefWidth="143.0" text="OrderItem" />
+                        <TableColumn prefWidth="168.0" text="Quantity" />
+                        <TableColumn prefWidth="168.0" text="Price" />
+                     </columns>
+                  </TableView>
+                  <ComboBox fx:id="CHOIsircustomer" layoutX="801.0" layoutY="308.0" onAction="#choixcustomer" prefWidth="150.0" promptText="Choisir-Customer" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
